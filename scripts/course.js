@@ -54,6 +54,7 @@ const filterButtons = [allBtn, wddBtn, cseBtn].filter(Boolean);
 function setActiveButton(activeButton) {
   filterButtons.forEach((button) => {
     button.classList.toggle("is-active", button === activeButton);
+    button.setAttribute("aria-pressed", String(button === activeButton));
   });
 }
 
@@ -79,7 +80,11 @@ function displayCourses(courseList) {
     const meta = document.createElement("p");
     meta.textContent = `${course.credits} credit${course.credits === 1 ? "" : "s"}`;
 
-    card.append(code, title, meta);
+    const status = document.createElement("p");
+    status.className = "course-status";
+    status.textContent = course.completed ? "Completed" : "Not completed";
+
+    card.append(code, title, meta, status);
     cardsContainer.appendChild(card);
   });
 

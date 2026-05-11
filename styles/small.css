@@ -17,6 +17,22 @@ body {
   min-width: 320px;
 }
 
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0.5rem;
+  background: #ffffff;
+  color: #0f3d3e;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.4rem;
+  border: 2px solid #0f3d3e;
+}
+
+.skip-link:focus {
+  left: 0.5rem;
+  z-index: 1000;
+}
+
 .site-header {
   background: var(--primary);
   color: var(--white);
@@ -30,11 +46,13 @@ body {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  min-width: 0;
 }
 
 .site-name {
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 3.4vw, 1.25rem);
   font-weight: 700;
+  line-height: 1.2;
 }
 
 .menu-button {
@@ -46,6 +64,7 @@ body {
   line-height: 1;
   padding: 0.2rem 0.6rem;
   cursor: pointer;
+  min-width: 2.35rem;
 }
 
 .site-nav {
@@ -81,6 +100,12 @@ body {
 .site-nav a:focus-visible {
   background: rgba(255, 255, 255, 0.1);
   border-bottom-color: var(--accent);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
 }
 
 main {
@@ -145,6 +170,11 @@ h2 {
 .course-card.completed {
   background: var(--complete);
   border-color: #98d6b6;
+}
+
+.course-status {
+  margin: 0.25rem 0 0;
+  font-weight: 600;
 }
 
 .course-code {
