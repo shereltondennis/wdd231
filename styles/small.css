@@ -70,6 +70,7 @@ body {
 .site-nav {
   display: none;
   background: #163c3c;
+  color: var(--white);
 }
 
 .site-nav.open {
@@ -93,6 +94,7 @@ body {
 
 .site-nav a[aria-current="page"] {
   background: rgba(242, 165, 65, 0.2);
+  color: #0c3031;
   border-bottom-color: var(--accent);
 }
 
