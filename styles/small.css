@@ -10,6 +10,12 @@
   --radius: 0.6rem;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Source Sans 3", sans-serif;
   color: var(--ink);
@@ -53,6 +59,7 @@ body {
   font-size: clamp(1rem, 3.4vw, 1.25rem);
   font-weight: 700;
   line-height: 1.2;
+  overflow-wrap: anywhere;
 }
 
 .menu-button {
@@ -94,7 +101,7 @@ body {
 
 .site-nav a[aria-current="page"] {
   background: rgba(242, 165, 65, 0.2);
-  color: #0c3031;
+  color: var(--white);
   border-bottom-color: var(--accent);
 }
 
@@ -132,6 +139,7 @@ h2 {
 
 .photo-section img {
   width: 100%;
+  height: auto;
   border-radius: 0.5rem;
 }
 
@@ -177,6 +185,10 @@ h2 {
 .course-status {
   margin: 0.25rem 0 0;
   font-weight: 600;
+}
+
+.course-status.completed {
+  color: #1c5a3b;
 }
 
 .course-code {

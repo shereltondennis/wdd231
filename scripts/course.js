@@ -81,7 +81,7 @@ function displayCourses(courseList) {
     meta.textContent = `${course.credits} credit${course.credits === 1 ? "" : "s"}`;
 
     const status = document.createElement("p");
-    status.className = "course-status";
+    status.className = `course-status${course.completed ? " completed" : ""}`;
     status.textContent = course.completed ? "Completed" : "Not completed";
 
     card.append(code, title, meta, status);
@@ -109,5 +109,6 @@ if (allBtn && wddBtn && cseBtn) {
   });
 
   setActiveButton(allBtn);
-  displayCourses(courses);
 }
+
+displayCourses(courses);
