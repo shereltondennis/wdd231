@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Atlantic Freight & Trade",
+    "address": "24 Broad Street, Monrovia",
+    "phone": "+231 88 540 9900",
+    "email": "contact@atlanticfreight.lr",
+    "website": "https://www.atlanticfreight.lr",
+    "image": "atlantic-freight.svg",
+    "membershipLevel": 3,
+    "description": "International freight logistics and customs support."
+  },
+  {
+    "name": "Paynesville Tech Hub",
+    "address": "3 ELWA Junction, Paynesville",
+    "phone": "+231 77 225 4100",
+    "email": "hello@paynesvilletech.lr",
+    "website": "https://www.paynesvilletech.lr",
+    "image": "paynesville-tech.svg",
+    "membershipLevel": 2,
+    "description": "Coworking and startup acceleration services."
+  },
+  {
+    "name": "Crownstone Foods",
+    "address": "100 Tubman Boulevard, Sinkor",
+    "phone": "+231 88 999 2200",
+    "email": "sales@crownstonefoods.lr",
+    "website": "https://www.crownstonefoods.lr",
+    "image": "crownstone-foods.svg",
+    "membershipLevel": 3,
+    "description": "Packaged foods distributor for retail chains."
+  },
+  {
+    "name": "Unity Medical Supplies",
+    "address": "12 Carey Street, Monrovia",
+    "phone": "+231 77 409 7700",
+    "email": "office@unitymedical.lr",
+    "website": "https://www.unitymedical.lr",
+    "image": "unity-medical.svg",
+    "membershipLevel": 2,
+    "description": "Medical consumables and clinic equipment."
+  },
+  {
+    "name": "Rivergate Construction",
+    "address": "48 Benson Street, Monrovia",
+    "phone": "+231 88 775 1300",
+    "email": "projects@rivergatebuild.lr",
+    "website": "https://www.rivergatebuild.lr",
+    "image": "rivergate-construction.svg",
+    "membershipLevel": 1,
+    "description": "Commercial and residential construction projects."
+  },
+  {
+    "name": "Harborline Bank",
+    "address": "66 Ashmun Street, Monrovia",
+    "phone": "+231 77 320 6100",
+    "email": "support@harborlinebank.lr",
+    "website": "https://www.harborlinebank.lr",
+    "image": "harborline-bank.svg",
+    "membershipLevel": 3,
+    "description": "Business banking, SME lending, and treasury services."
+  },
+  {
+    "name": "Sunrise Learning Center",
+    "address": "21 9th Street, Sinkor",
+    "phone": "+231 88 304 4410",
+    "email": "admin@sunriselearning.lr",
+    "website": "https://www.sunriselearning.lr",
+    "image": "sunrise-learning.svg",
+    "membershipLevel": 1,
+    "description": "Professional training and digital literacy programs."
+  }
+]

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Directory page for the Monrovia Regional Chamber of Commerce with member listings in grid or list view.">
+  <meta name="author" content="Sherelton Blessing Dennis">
+  <meta property="og:title" content="Monrovia Regional Chamber | Directory">
+  <meta property="og:description" content="Browse member businesses of the Monrovia Regional Chamber of Commerce.">
+  <meta property="og:image" content="https://shereltondennis.github.io/wdd231/chamber/images/chamber-social.svg">
+  <meta property="og:url" content="https://shereltondennis.github.io/wdd231/chamber/directory.html">
+  <meta property="og:type" content="website">
+  <title>Monrovia Regional Chamber | Directory</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/footer.js" defer></script>
+  <script src="scripts/directory.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="brand-wrap">
+      <img src="images/favicon.svg" alt="" width="44" height="44">
+      <div>
+        <p class="site-title">Monrovia Regional Chamber</p>
+        <p class="site-subtitle">Chamber of Commerce</p>
+      </div>
+    </div>
+    <button id="menuButton" class="menu-button" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
+      <span aria-hidden="true">&#9776;</span>
+    </button>
+  </header>
+
+  <nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="directory.html" aria-current="page">Directory</a></li>
+      <li><a href="join.html">Join</a></li>
+      <li><a href="discover.html">Discover</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+    <h1>Member Directory</h1>
+
+    <section class="directory-controls" aria-label="Directory view controls">
+      <h2>View Members</h2>
+      <div class="view-switch" role="group" aria-label="Select member view">
+        <button id="gridView" type="button" class="view-button is-active" aria-pressed="true">Grid View</button>
+        <button id="listView" type="button" class="view-button" aria-pressed="false">List View</button>
+      </div>
+    </section>
+
+    <section id="membersContainer" class="members grid-view" aria-live="polite"></section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <section>
+        <h2>Monrovia Regional Chamber</h2>
+        <p>15 Capitol Hill Road, Monrovia, Liberia</p>
+        <p>info@monroviachamber.org</p>
+        <p>+231 77 310 4401</p>
+      </section>
+      <section>
+        <h2>Development</h2>
+        <p>&copy; <span id="currentYear"></span> Sherelton Blessing Dennis</p>
+        <p>WDD 231 Chamber Project</p>
+        <p id="lastModified"></p>
+      </section>
+    </div>
+  </footer>
+</body>
+</html>

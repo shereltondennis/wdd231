@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#113a5d"/>
+      <stop offset="1" stop-color="#0b2740"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1020" cy="110" r="150" fill="#f28f3b" opacity="0.2"/>
+  <circle cx="120" cy="560" r="180" fill="#f28f3b" opacity="0.25"/>
+  <text x="100" y="280" font-family="Source Sans 3, Arial, sans-serif" font-size="72" font-weight="700" fill="#ffffff">Monrovia Regional Chamber</text>
+  <text x="100" y="360" font-family="Source Sans 3, Arial, sans-serif" font-size="44" fill="#d7e6f5">Member Business Directory</text>
+</svg>
