@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Home page for the WDD231 repository showing course progress, certificate coursework, and responsive navigation.">
+  <meta name="author" content="Sherelton Blessing Dennis">
+  <title>WDD231 Course Home</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/course.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand-wrap" href="index.html">
+      <img src="images/logo.svg" alt="WDD231 site logo" width="48" height="48">
+      <div>
+        <p class="site-title">WDD231 Course Home</p>
+        <span class="site-name">Sherelton Blessing Dennis</span>
+      </div>
+    </a>
+    <button id="menuButton" class="menu-button" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
+      <span aria-hidden="true">&#9776;</span>
+    </button>
+  </header>
+
+  <nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
+    <ul>
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="chamber/directory.html">Chamber</a></li>
+      <li><a href="final/index.html">Final</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+    <section class="hero">
+      <h1>Home</h1>
+      <p>Welcome to my WDD231 course home page. This page tracks my coursework, certificate progress, and project links in a fully responsive design.</p>
+    </section>
+
+    <section class="intro-section">
+      <h2>About this page</h2>
+      <p>This course home page is built using semantic HTML, responsive CSS, and external JavaScript. It includes a mobile-friendly navigation menu, course progress cards, and dynamically updated dates.</p>
+      <ul>
+        <li>Responsive layout for all screens from 320px up</li>
+        <li>Dynamic course filtering with JavaScript</li>
+        <li>Accessible navigation and footer content</li>
+      </ul>
+    </section>
+
+    <section class="certificate-section">
+      <h2>Web and Computer Programming Certificate</h2>
+      <div class="course-controls">
+        <div class="course-text">
+          <p>Filter the certificate courses below and see the total credits for the current view.</p>
+        </div>
+        <div class="button-group" role="group" aria-label="Filter courses">
+          <button id="allBtn" class="filter-button is-active" aria-pressed="true">All Courses</button>
+          <button id="wddBtn" class="filter-button" aria-pressed="false">WDD Courses</button>
+          <button id="cseBtn" class="filter-button" aria-pressed="false">CSE Courses</button>
+        </div>
+      </div>
+      <div id="courseCards" class="course-grid" aria-live="polite"></div>
+      <p id="creditsTotal" class="credits-total"></p>
+    </section>
+
+    <section class="projects-section">
+      <h2>Projects</h2>
+      <p>Use the navigation to view the week 2 Chamber project and the placeholder for the week 6 Final project.</p>
+      <ul class="project-list">
+        <li><strong>Chamber:</strong> Week 2 directory project.</li>
+        <li><strong>Final:</strong> Week 6 final project placeholder page.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="social-group">
+        <h3>Connect</h3>
+        <ul class="social-links">
+          <li><a href="https://github.com/yourgithubusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn</a></li>
+          <li><a href="https://codepen.io/" target="_blank" rel="noopener noreferrer" aria-label="Open source code examples">CodePen</a></li>
+        </ul>
+      </div>
+      <div class="copyright-group">
+        <p>&copy; <span id="currentYear"></span> Sherelton Blessing Dennis</p>
+        <p>Monrovia, Liberia</p>
+      </div>
+      <div class="modified-group">
+        <p id="lastModified"></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
