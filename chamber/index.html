@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Home page for the Monrovia Regional Chamber of Commerce featuring events, weather, and member business spotlights.">
+  <meta name="author" content="Sherelton Blessing Dennis">
+  <meta property="og:title" content="Monrovia Regional Chamber | Home">
+  <meta property="og:description" content="Connect with Monrovia business opportunities, local events, and featured chamber members.">
+  <meta property="og:image" content="https://shereltondennis.github.io/wdd231/chamber/images/chamber-social.svg">
+  <meta property="og:url" content="https://shereltondennis.github.io/wdd231/chamber/index.html">
+  <meta property="og:type" content="website">
+  <title>Monrovia Regional Chamber | Home</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <link rel="stylesheet" href="styles/home.css">
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/footer.js" defer></script>
+  <script src="scripts/home.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="brand-wrap">
+      <img src="images/favicon.svg" alt="" width="44" height="44">
+      <div>
+        <p class="site-title">Monrovia Regional Chamber</p>
+        <p class="site-subtitle">Chamber of Commerce</p>
+      </div>
+    </div>
+    <button id="menuButton" class="menu-button" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
+      <span aria-hidden="true">&#9776;</span>
+    </button>
+  </header>
+
+  <nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
+    <ul>
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="join.html">Join</a></li>
+      <li><a href="discover.html">Discover</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content" class="home-main">
+    <section class="hero" aria-label="Chamber introduction">
+      <img class="hero-image" src="images/chamber-social.svg" alt="Monrovia Regional Chamber promotional banner" width="1200" height="630" loading="eager" fetchpriority="high">
+      <div class="hero-content">
+        <h1>Monrovia Regional Chamber</h1>
+        <p>Grow your business network, connect to local opportunities, and stay informed with community-driven commerce updates.</p>
+        <a class="cta-link" href="join.html">Join the Chamber</a>
+      </div>
+    </section>
+
+    <div class="home-grid">
+      <section class="content-card events" aria-labelledby="events-heading">
+        <h2 id="events-heading">Current Events</h2>
+        <ul class="event-list">
+          <li>
+            <h3>Small Business Tax Briefing</h3>
+            <p>May 28, 2026 at 10:00 AM</p>
+            <p>Capitol Hill Conference Center</p>
+          </li>
+          <li>
+            <h3>Women in Enterprise Meetup</h3>
+            <p>June 3, 2026 at 4:00 PM</p>
+            <p>Sinkor Business Forum Hall</p>
+          </li>
+          <li>
+            <h3>Regional Trade Expo Planning Session</h3>
+            <p>June 10, 2026 at 2:00 PM</p>
+            <p>Monrovia Chamber Offices</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="content-card weather" aria-labelledby="weather-heading">
+        <h2 id="weather-heading">Weather in Monrovia</h2>
+        <p class="weather-current"><strong>Current:</strong> <span id="currentTemp">Loading...</span> - <span id="currentDesc">Loading weather details...</span></p>
+        <h3>3-Day Forecast</h3>
+        <ul id="forecastList" class="forecast-list" aria-live="polite">
+          <li>Loading forecast...</li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="spotlights" aria-labelledby="spotlights-heading">
+      <div class="spotlights-head">
+        <h2 id="spotlights-heading">Member Spotlights</h2>
+        <p>Featuring randomly selected Gold and Silver members.</p>
+      </div>
+      <div id="spotlightContainer" class="spotlight-grid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <section>
+        <h2>Monrovia Regional Chamber</h2>
+        <p>15 Capitol Hill Road, Monrovia, Liberia</p>
+        <p>info@monroviachamber.org</p>
+        <p>+231 77 310 4401</p>
+      </section>
+      <section>
+        <h2>Development</h2>
+        <p>&copy; <span id="currentYear"></span> Sherelton Blessing Dennis</p>
+        <p>WDD 231 Chamber Project</p>
+        <p id="lastModified"></p>
+      </section>
+    </div>
+  </footer>
+</body>
+</html>
