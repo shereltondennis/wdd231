@@ -1,4 +1,3 @@
-const WEATHER_API_KEY = "YOUR_OPENWEATHERMAP_API_KEY";
 const MONROVIA_COORDS = {
   lat: 6.30054,
   lon: -10.7969
@@ -12,6 +11,37 @@ const spotlightContainer = document.querySelector("#spotlightContainer");
 const membershipLabels = {
   2: "Silver",
   3: "Gold"
+};
+
+const weatherCodeLabels = {
+  0: "Clear sky",
+  1: "Mainly clear",
+  2: "Partly cloudy",
+  3: "Overcast",
+  45: "Fog",
+  48: "Depositing rime fog",
+  51: "Light drizzle",
+  53: "Moderate drizzle",
+  55: "Dense drizzle",
+  56: "Light freezing drizzle",
+  57: "Dense freezing drizzle",
+  61: "Slight rain",
+  63: "Moderate rain",
+  65: "Heavy rain",
+  66: "Light freezing rain",
+  67: "Heavy freezing rain",
+  71: "Slight snow fall",
+  73: "Moderate snow fall",
+  75: "Heavy snow fall",
+  77: "Snow grains",
+  80: "Slight rain showers",
+  81: "Moderate rain showers",
+  82: "Violent rain showers",
+  85: "Slight snow showers",
+  86: "Heavy snow showers",
+  95: "Thunderstorm",
+  96: "Thunderstorm with slight hail",
+  99: "Thunderstorm with heavy hail"
 };
 
 const formatTemperature = (temp) => `${Math.round(temp)} C`;
@@ -35,70 +65,42 @@ const renderWeatherError = (message) => {
   }
 };
 
-const pickForecastDays = (forecastItems) => {
-  const today = new Date().toISOString().split("T")[0];
-  const byDay = new Map();
-
-  forecastItems.forEach((item) => {
-    const [datePart, timePart] = item.dt_txt.split(" ");
-    if (datePart === today) {
-      return;
-    }
-
-    const hour = Number(timePart.slice(0, 2));
-    const candidate = {
-      day: datePart,
-      hour,
-      temp: item.main.temp
-    };
-
-    if (!byDay.has(datePart)) {
-      byDay.set(datePart, candidate);
-      return;
-    }
-
-    const existing = byDay.get(datePart);
-    const existingDelta = Math.abs(existing.hour - 12);
-    const candidateDelta = Math.abs(hour - 12);
-
-    if (candidateDelta < existingDelta) {
-      byDay.set(datePart, candidate);
-    }
-  });
-
-  return Array.from(byDay.values()).slice(0, 3);
-};
-
 const loadWeather = async () => {
   if (!currentTempElement || !currentDescElement || !forecastList) {
     return;
   }
 
-  if (WEATHER_API_KEY === "YOUR_OPENWEATHERMAP_API_KEY") {
-    renderWeatherError("Add your OpenWeatherMap API key in scripts/home.js.");
-    return;
-  }
-
   try {
-    const query = `lat=${MONROVIA_COORDS.lat}&lon=${MONROVIA_COORDS.lon}&units=metric&appid=${WEATHER_API_KEY}`;
-    const [currentResponse, forecastResponse] = await Promise.all([
-      fetch(`https://api.openweathermap.org/data/2.5/weather?${query}`),
-      fetch(`https://api.openweathermap.org/data/2.5/forecast?${query}`)
-    ]);
+    const query = `latitude=${MONROVIA_COORDS.lat}&longitude=${MONROVIA_COORDS.lon}&current=temperature_2m,weather_code&daily=weather_code,temperature_2m_max&timezone=Africa%2FMonrovia&forecast_days=4`;
+    const response = await fetch(`https://api.open-meteo.com/v1/forecast?${query}`);
 
-    if (!currentResponse.ok || !forecastResponse.ok) {
+    if (!response.ok) {
       throw new Error("Weather request failed.");
     }
 
-    const currentWeather = await currentResponse.json();
-    const forecastData = await forecastResponse.json();
+    const weatherData = await response.json();
+    const currentTemp = weatherData?.current?.temperature_2m;
+    const currentCode = weatherData?.current?.weather_code;
+    const forecastDates = weatherData?.daily?.time ?? [];
+    const forecastCodes = weatherData?.daily?.weather_code ?? [];
+    const forecastTemps = weatherData?.daily?.temperature_2m_max ?? [];
 
-    currentTempElement.textContent = formatTemperature(currentWeather.main.temp);
-    currentDescElement.textContent = currentWeather.weather[0].description;
+    if (typeof currentTemp !== "number" || typeof currentCode !== "number") {
+      throw new Error("Incomplete current weather data.");
+    }
 
-    const threeDay = pickForecastDays(forecastData.list);
+    currentTempElement.textContent = formatTemperature(currentTemp);
+    currentDescElement.textContent = weatherCodeLabels[currentCode] ?? "Unknown conditions";
 
     forecastList.innerHTML = "";
+
+    const threeDay = forecastDates.slice(1, 4)
+      .map((date, index) => ({
+        day: date,
+        code: forecastCodes[index + 1],
+        temp: forecastTemps[index + 1]
+      }))
+      .filter((entry) => typeof entry.code === "number" && typeof entry.temp === "number");
 
     if (!threeDay.length) {
       forecastList.innerHTML = "<li>Forecast data is currently unavailable.</li>";
@@ -107,8 +109,9 @@ const loadWeather = async () => {
 
     threeDay.forEach((entry) => {
       const item = document.createElement("li");
-      item.innerHTML = `<span class="forecast-day">${getWeekdayLabel(entry.day)}</span><span>${formatTemperature(entry.temp)}</span>`;
-      forecastList.append(item);
+      const condition = weatherCodeLabels[entry.code] ?? "Forecast unavailable";
+      item.innerHTML = `<span class="forecast-day">${getWeekdayLabel(entry.day)}</span><span>${condition}</span><span>${formatTemperature(entry.temp)}</span>`;
+      forecastList.appendChild(item);
     });
   } catch (error) {
     renderWeatherError("Unable to load weather data right now.");
