@@ -99,7 +99,9 @@ body {
 }
 
 .site-nav a[aria-current="page"] {
-  background: rgba(242, 143, 59, 0.18);
+  background: var(--accent);
+  color: var(--primary-dark);
+  font-weight: 700;
   border-bottom-color: var(--accent);
 }
 
