@@ -1,9 +1,16 @@
 const timestampField = document.querySelector("#timestamp");
+const joinForm = document.querySelector(".join-form");
 const modalLinks = document.querySelectorAll("[data-modal]");
 const closeButtons = document.querySelectorAll("[data-close]");
 
 if (timestampField) {
   timestampField.value = new Date().toISOString();
+}
+
+if (joinForm && timestampField) {
+  joinForm.addEventListener("submit", () => {
+    timestampField.value = new Date().toISOString();
+  });
 }
 
 modalLinks.forEach((link) => {

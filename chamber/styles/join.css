@@ -15,7 +15,7 @@
   border: 1px solid var(--card-border);
   border-radius: 0.65rem;
   padding: 1rem;
-  box-shadow: 0 4px 12px rgba(17, 58, 93, 0.08);
+  box-shadow: 0 4px 12px #113a5d14;
 }
 
 .application-panel h2,
@@ -52,7 +52,7 @@
 .join-form input:focus,
 .join-form select:focus,
 .join-form textarea:focus {
-  outline: 3px solid rgba(242, 143, 59, 0.55);
+  outline: 3px solid #f28f3b8c;
   border-color: var(--primary-dark);
 }
 
@@ -137,11 +137,11 @@
   border-radius: 0.65rem;
   padding: 1rem;
   color: var(--ink);
-  box-shadow: 0 12px 34px rgba(11, 39, 64, 0.3);
+  box-shadow: 0 12px 34px #0b27404d;
 }
 
 .membership-modal::backdrop {
-  background: rgba(11, 39, 64, 0.62);
+  background: #0b27409e;
 }
 
 .membership-modal h2 {

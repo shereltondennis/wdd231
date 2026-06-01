@@ -8,14 +8,14 @@
   border-radius: 0.75rem;
   overflow: hidden;
   background: #0b2740;
-  box-shadow: 0 6px 18px rgba(17, 58, 93, 0.18);
+  box-shadow: 0 6px 18px #113a5d2e;
 }
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(110deg, rgba(11, 39, 64, 0.88) 0%, rgba(11, 39, 64, 0.72) 52%, rgba(11, 39, 64, 0.38) 100%);
+  background: linear-gradient(110deg, #0b2740e0 0%, #0b2740b8 52%, #0b274061 100%);
   z-index: 1;
 }
 
@@ -71,7 +71,7 @@
   border: 1px solid var(--card-border);
   border-radius: 0.65rem;
   padding: 1rem;
-  box-shadow: 0 4px 12px rgba(17, 58, 93, 0.08);
+  box-shadow: 0 4px 12px #113a5d14;
 }
 
 .content-card h2,
@@ -144,7 +144,7 @@
   border: 1px solid var(--card-border);
   border-radius: 0.65rem;
   padding: 1rem;
-  box-shadow: 0 4px 12px rgba(17, 58, 93, 0.08);
+  box-shadow: 0 4px 12px #113a5d14;
 }
 
 .spotlights-head h2 {
