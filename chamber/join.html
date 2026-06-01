@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apply to join the Monrovia Regional Chamber of Commerce and compare membership levels.">
+  <meta name="author" content="Sherelton Blessing Dennis">
+  <meta property="og:title" content="Monrovia Regional Chamber | Join">
+  <meta property="og:description" content="Submit a chamber membership application and review benefits for NP, Bronze, Silver, and Gold levels.">
+  <meta property="og:image" content="https://shereltondennis.github.io/wdd231/chamber/images/chamber-social.svg">
+  <meta property="og:url" content="https://shereltondennis.github.io/wdd231/chamber/join.html">
+  <meta property="og:type" content="website">
+  <title>Monrovia Regional Chamber | Join</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <link rel="stylesheet" href="styles/join.css">
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/footer.js" defer></script>
+  <script src="scripts/join.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="brand-wrap">
+      <img src="images/favicon.svg" alt="" width="44" height="44">
+      <div>
+        <p class="site-title">Monrovia Regional Chamber</p>
+        <p class="site-subtitle">Chamber of Commerce</p>
+      </div>
+    </div>
+    <button id="menuButton" class="menu-button" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
+      <span aria-hidden="true">&#9776;</span>
+    </button>
+  </header>
+
+  <nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="join.html" aria-current="page">Join</a></li>
+      <li><a href="discover.html">Discover</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+    <h1>Join the Chamber</h1>
+    <p class="intro">Complete the membership application and choose the level that best fits your organization.</p>
+
+    <div class="join-layout">
+      <section class="application-panel" aria-labelledby="application-heading">
+        <h2 id="application-heading">Membership Application</h2>
+        <form method="get" action="thankyou.html" class="join-form">
+          <label>
+            First Name
+            <input type="text" name="firstName" title="Applicant's first name" autocomplete="given-name" required>
+          </label>
+
+          <label>
+            Last Name
+            <input type="text" name="lastName" title="Applicant's last name" autocomplete="family-name" required>
+          </label>
+
+          <label>
+            Organizational Title
+            <input type="text" name="organizationTitle" title="Applicant's organizational title using at least seven letters, spaces, or hyphens" autocomplete="organization-title" pattern="[A-Za-z -]{7,}">
+          </label>
+
+          <label>
+            Email Address
+            <input type="email" name="email" title="Applicant's email address" autocomplete="email" placeholder="name@example.com" required>
+          </label>
+
+          <label>
+            Mobile Phone
+            <input type="tel" name="phone" title="Applicant's mobile phone number" autocomplete="tel" required>
+          </label>
+
+          <label>
+            Business or Organization Name
+            <input type="text" name="organization" title="Business or organization name" autocomplete="organization" required>
+          </label>
+
+          <label>
+            Membership Level
+            <select name="membership" title="Select a membership level" required>
+              <option value="np">NP Membership</option>
+              <option value="bronze">Bronze Membership</option>
+              <option value="silver">Silver Membership</option>
+              <option value="gold">Gold Membership</option>
+            </select>
+          </label>
+
+          <label>
+            Business or Organization Description
+            <textarea name="description" title="Business or organization description" rows="5"></textarea>
+          </label>
+
+          <label class="hidden-field">
+            Timestamp
+            <input type="hidden" name="timestamp" id="timestamp">
+          </label>
+
+          <input type="submit" value="Submit Membership Application">
+        </form>
+      </section>
+
+      <section class="membership-panel" aria-labelledby="membership-heading">
+        <h2 id="membership-heading">Membership Levels</h2>
+        <div class="membership-cards">
+          <article class="membership-card">
+            <h3>NP Membership</h3>
+            <p>For nonprofit organizations with no annual fee.</p>
+            <a href="#np-modal" data-modal="np-modal">View benefits</a>
+          </article>
+
+          <article class="membership-card">
+            <h3>Bronze Membership</h3>
+            <p>Foundational visibility and networking access.</p>
+            <a href="#bronze-modal" data-modal="bronze-modal">View benefits</a>
+          </article>
+
+          <article class="membership-card">
+            <h3>Silver Membership</h3>
+            <p>Expanded promotion, training, and event discounts.</p>
+            <a href="#silver-modal" data-modal="silver-modal">View benefits</a>
+          </article>
+
+          <article class="membership-card">
+            <h3>Gold Membership</h3>
+            <p>Premier exposure and highest chamber benefit package.</p>
+            <a href="#gold-modal" data-modal="gold-modal">View benefits</a>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <dialog id="np-modal" class="membership-modal">
+    <h2>NP Membership Benefits</h2>
+    <p>No annual fee for qualified nonprofit organizations.</p>
+    <ul>
+      <li>Chamber directory listing</li>
+      <li>Community event announcements</li>
+      <li>Access to nonprofit networking sessions</li>
+    </ul>
+    <button type="button" data-close>Close</button>
+  </dialog>
+
+  <dialog id="bronze-modal" class="membership-modal">
+    <h2>Bronze Membership Benefits</h2>
+    <p>Entry-level chamber support for growing organizations.</p>
+    <ul>
+      <li>Business directory listing</li>
+      <li>Member newsletter features</li>
+      <li>Standard chamber event access</li>
+    </ul>
+    <button type="button" data-close>Close</button>
+  </dialog>
+
+  <dialog id="silver-modal" class="membership-modal">
+    <h2>Silver Membership Benefits</h2>
+    <p>More promotion and professional development opportunities.</p>
+    <ul>
+      <li>All Bronze benefits</li>
+      <li>Training workshop discounts</li>
+      <li>Rotating home page spotlight eligibility</li>
+      <li>Priority booth selection at chamber events</li>
+    </ul>
+    <button type="button" data-close>Close</button>
+  </dialog>
+
+  <dialog id="gold-modal" class="membership-modal">
+    <h2>Gold Membership Benefits</h2>
+    <p>Premier chamber visibility and event access.</p>
+    <ul>
+      <li>All Silver benefits</li>
+      <li>Featured advertising placement</li>
+      <li>Complimentary signature event tickets</li>
+      <li>Invitation to executive roundtables</li>
+    </ul>
+    <button type="button" data-close>Close</button>
+  </dialog>
+
+  <footer>
+    <div class="footer-content">
+      <section>
+        <h2>Monrovia Regional Chamber</h2>
+        <p>15 Capitol Hill Road, Monrovia, Liberia</p>
+        <p>info@monroviachamber.org</p>
+        <p>+231 77 310 4401</p>
+      </section>
+      <section>
+        <h2>Development</h2>
+        <p>&copy; <span id="currentYear"></span> Sherelton Blessing Dennis</p>
+        <p>WDD 231 Chamber Project</p>
+        <p id="lastModified"></p>
+      </section>
+    </div>
+  </footer>
+</body>
+</html>

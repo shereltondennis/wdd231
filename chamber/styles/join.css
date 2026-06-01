@@ -1,0 +1,213 @@
+.intro {
+  margin: 0 0 1rem;
+  max-width: 42rem;
+}
+
+.join-layout {
+  display: grid;
+  gap: 1rem;
+}
+
+.application-panel,
+.membership-panel,
+.thankyou-panel {
+  background: var(--white);
+  border: 1px solid var(--card-border);
+  border-radius: 0.65rem;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(17, 58, 93, 0.08);
+}
+
+.application-panel h2,
+.membership-panel h2,
+.thankyou-panel h2 {
+  margin-top: 0;
+}
+
+.join-form {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.join-form label {
+  display: grid;
+  gap: 0.3rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+.join-form input,
+.join-form select,
+.join-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #9eb0c2;
+  border-radius: 0.45rem;
+  padding: 0.55rem 0.65rem;
+  color: var(--ink);
+  background: #ffffff;
+  font: inherit;
+}
+
+.join-form input:focus,
+.join-form select:focus,
+.join-form textarea:focus {
+  outline: 3px solid rgba(242, 143, 59, 0.55);
+  border-color: var(--primary-dark);
+}
+
+.join-form input[type="submit"] {
+  cursor: pointer;
+  border-color: var(--primary);
+  background: var(--primary);
+  color: var(--white);
+  font-weight: 700;
+}
+
+.join-form input[type="submit"]:hover,
+.join-form input[type="submit"]:focus-visible {
+  background: var(--primary-dark);
+}
+
+.hidden-field {
+  display: none;
+}
+
+.membership-cards {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.membership-card {
+  border: 1px solid var(--card-border);
+  border-left: 0.45rem solid var(--accent);
+  border-radius: 0.65rem;
+  background: #fbfdff;
+  padding: 0.95rem;
+  opacity: 0;
+  transform: translateY(1rem);
+  animation: card-arrive 700ms ease forwards;
+}
+
+.membership-card:nth-child(2) {
+  animation-delay: 120ms;
+}
+
+.membership-card:nth-child(3) {
+  animation-delay: 240ms;
+}
+
+.membership-card:nth-child(4) {
+  animation-delay: 360ms;
+}
+
+.membership-card h3 {
+  margin: 0 0 0.35rem;
+  color: var(--primary-dark);
+}
+
+.membership-card p {
+  margin: 0 0 0.7rem;
+}
+
+.membership-card a,
+.membership-modal button {
+  display: inline-block;
+  border: 1px solid var(--primary);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--primary-dark);
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0.4rem 0.85rem;
+  text-decoration: none;
+}
+
+.membership-card a:hover,
+.membership-card a:focus-visible,
+.membership-modal button:hover,
+.membership-modal button:focus-visible {
+  background: var(--accent);
+  color: var(--primary-dark);
+}
+
+.membership-modal {
+  max-width: min(92vw, 32rem);
+  border: 1px solid var(--card-border);
+  border-radius: 0.65rem;
+  padding: 1rem;
+  color: var(--ink);
+  box-shadow: 0 12px 34px rgba(11, 39, 64, 0.3);
+}
+
+.membership-modal::backdrop {
+  background: rgba(11, 39, 64, 0.62);
+}
+
+.membership-modal h2 {
+  margin-top: 0;
+}
+
+.membership-modal ul {
+  padding-left: 1.25rem;
+}
+
+.thankyou-panel {
+  max-width: 780px;
+}
+
+.thankyou-panel p {
+  max-width: 44rem;
+}
+
+.submission-summary {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0;
+}
+
+.submission-summary div {
+  display: grid;
+  gap: 0.15rem;
+  border: 1px solid #dbe5ef;
+  border-radius: 0.5rem;
+  background: var(--surface);
+  padding: 0.65rem 0.75rem;
+}
+
+.submission-summary dt {
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+
+.submission-summary dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+@keyframes card-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .membership-card {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (min-width: 760px) {
+  .join-layout {
+    grid-template-columns: minmax(0, 1.4fr) minmax(18rem, 0.8fr);
+    align-items: start;
+  }
+}
