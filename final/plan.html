@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plan a Monrovia food visit by sharing cuisine interests, group size, travel date, and neighborhood preferences.">
+  <meta name="author" content="Sherelton Blessing Dennis">
+  <meta property="og:title" content="Plan a Monrovia Food Visit">
+  <meta property="og:description" content="Send a simple Monrovia dining plan request with an accessible HTML form.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/monrovia-food-finder.svg">
+  <title>Monrovia Food Finder | Plan a Visit</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/site.css">
+  <script type="module" src="scripts/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Monrovia Food Finder home">
+      <img src="images/favicon.svg" alt="" width="44" height="44">
+      <span>Monrovia Food Finder</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
+      <span aria-hidden="true">&#9776;</span>
+    </button>
+    <nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="directory.html">Dining Directory</a>
+      <a href="plan.html" aria-current="page">Plan a Visit</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="page-heading">
+      <p class="eyebrow">Plan a visit</p>
+      <h1>Build a simple food plan.</h1>
+      <p>Use the form to collect dining interests and display the submitted information on the confirmation page.</p>
+    </section>
+
+    <form class="plan-form" method="get" action="thanks.html">
+      <label>
+        Full name
+        <input type="text" name="name" autocomplete="name" required>
+      </label>
+      <label>
+        Email
+        <input type="email" name="email" autocomplete="email" required>
+      </label>
+      <label>
+        Visit date
+        <input type="date" name="visit-date" required>
+      </label>
+      <label>
+        Group size
+        <input type="number" name="group-size" min="1" max="20" value="2" required>
+      </label>
+      <label>
+        Preferred neighborhood
+        <select name="neighborhood" required>
+          <option value="">Select a neighborhood</option>
+          <option>Sinkor</option>
+          <option>Mamba Point</option>
+          <option>Central Monrovia</option>
+          <option>Congo Town</option>
+          <option>Paynesville</option>
+        </select>
+      </label>
+      <fieldset>
+        <legend>Dining interests</legend>
+        <label><input type="checkbox" name="interest" value="Liberian plates"> Liberian plates</label>
+        <label><input type="checkbox" name="interest" value="Seafood"> Seafood</label>
+        <label><input type="checkbox" name="interest" value="Coffee"> Coffee</label>
+        <label><input type="checkbox" name="interest" value="Vegetarian"> Vegetarian</label>
+      </fieldset>
+      <label>
+        Notes
+        <textarea name="notes" rows="5" placeholder="Diet needs, timing, or meal goals"></textarea>
+      </label>
+      <button class="button primary" type="submit">Submit Plan</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="current-year"></span> Sherelton Blessing Dennis</p>
+    <p><a href="attributions.html">Attributions</a></p>
+    <p><a href="https://www.youtube.com/" target="_blank" rel="noopener">Video demonstration</a></p>
+    <p id="last-modified"></p>
+  </footer>
+</body>
+</html>

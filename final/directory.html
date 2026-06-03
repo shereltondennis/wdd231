@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse fifteen Monrovia dining listings by cuisine, neighborhood, price range, rating, and best time to visit.">
+  <meta name="author" content="Sherelton Blessing Dennis">
+  <meta property="og:title" content="Monrovia Food Finder Dining Directory">
+  <meta property="og:description" content="Filter local Monrovia dining listings and open details in an accessible modal dialog.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/monrovia-food-finder.svg">
+  <title>Monrovia Food Finder | Dining Directory</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/site.css">
+  <script type="module" src="scripts/directory.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Monrovia Food Finder home">
+      <img src="images/favicon.svg" alt="" width="44" height="44">
+      <span>Monrovia Food Finder</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
+      <span aria-hidden="true">&#9776;</span>
+    </button>
+    <nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="directory.html" aria-current="page">Dining Directory</a>
+      <a href="plan.html">Plan a Visit</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="page-heading">
+      <p class="eyebrow">Dining directory</p>
+      <h1>Compare Monrovia dining stops.</h1>
+      <p>Filter by cuisine, save a preferred cuisine, and open each card for details.</p>
+    </section>
+
+    <section class="toolbar" aria-label="Directory controls">
+      <label for="cuisine-filter">Cuisine</label>
+      <select id="cuisine-filter">
+        <option value="all">All cuisines</option>
+      </select>
+      <button id="save-preference" class="button secondary" type="button">Save Preference</button>
+      <p id="preference-note" class="status" aria-live="polite"></p>
+    </section>
+
+    <section>
+      <div class="list-summary">
+        <h2>Dining Listings</h2>
+        <p id="listing-count"></p>
+      </div>
+      <div id="restaurant-grid" class="restaurant-grid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <dialog id="details-dialog" class="details-dialog" aria-labelledby="dialog-title">
+    <button id="dialog-close" class="icon-button" type="button" aria-label="Close details">&times;</button>
+    <div id="dialog-content"></div>
+  </dialog>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="current-year"></span> Sherelton Blessing Dennis</p>
+    <p><a href="attributions.html">Attributions</a></p>
+    <p><a href="https://www.youtube.com/" target="_blank" rel="noopener">Video demonstration</a></p>
+    <p id="last-modified"></p>
+  </footer>
+</body>
+</html>

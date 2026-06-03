@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 236" role="img" aria-label="Pepper soup bowl">
+  <rect width="420" height="236" fill="#eaf4ef"/>
+  <ellipse cx="210" cy="120" rx="122" ry="48" fill="#ffffff"/>
+  <ellipse cx="210" cy="118" rx="96" ry="31" fill="#b73822"/>
+  <path d="M111 124h198l-38 73H149z" fill="#ffffff"/>
+  <circle cx="177" cy="113" r="9" fill="#f2c14e"/>
+  <circle cx="221" cy="126" r="9" fill="#f2c14e"/>
+  <path d="M183 76c-10-16 18-21 8-39m48 39c-10-16 18-21 8-39" stroke="#246b55" stroke-width="8" stroke-linecap="round"/>
+</svg>

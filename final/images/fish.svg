@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 236" role="img" aria-label="Grilled fish plate">
+  <rect width="420" height="236" fill="#eaf4ef"/>
+  <ellipse cx="205" cy="124" rx="128" ry="56" fill="#ffffff"/>
+  <path d="M100 122c58-53 137-53 204 0-67 53-146 53-204 0z" fill="#b73822"/>
+  <path d="M304 122l48-36v72z" fill="#b73822"/>
+  <circle cx="146" cy="113" r="7" fill="#16201d"/>
+  <path d="M190 92c20 20 20 41 0 62m42-62c20 20 20 41 0 62" stroke="#fff8e8" stroke-width="8"/>
+</svg>

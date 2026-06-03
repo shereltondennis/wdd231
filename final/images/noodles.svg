@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 236" role="img" aria-label="Noodle bowl">
+  <rect width="420" height="236" fill="#fff8e8"/>
+  <path d="M101 101h218l-38 93H139z" fill="#ffffff"/>
+  <path d="M139 104c24 28 48 28 72 0s48-28 72 0" stroke="#f2c14e" stroke-width="13" fill="none"/>
+  <path d="M132 130c32 23 64 23 96 0s64-23 96 0" stroke="#b73822" stroke-width="10" fill="none"/>
+  <path d="M120 64l218 43" stroke="#246b55" stroke-width="8" stroke-linecap="round"/>
+</svg>

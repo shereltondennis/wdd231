@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 236" role="img" aria-label="Shawarma wrap">
+  <rect width="420" height="236" fill="#f7f4ec"/>
+  <path d="M127 55l172 52-49 89-151-72z" fill="#f2c14e"/>
+  <path d="M149 74l126 38-35 62-111-52z" fill="#fff8e8"/>
+  <path d="M168 94l82 25m-96 9l74 27" stroke="#246b55" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="249" cy="105" r="12" fill="#b73822"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 236" role="img" aria-label="Fresh fruit juice">
+  <rect width="420" height="236" fill="#f7f4ec"/>
+  <path d="M153 63h112l-17 140h-78z" fill="#ffffff"/>
+  <path d="M164 111h90l-10 82h-70z" fill="#f2c14e"/>
+  <path d="M233 43l46-24" stroke="#246b55" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="282" cy="137" r="31" fill="#b73822"/>
+  <circle cx="111" cy="151" r="27" fill="#246b55"/>
+</svg>

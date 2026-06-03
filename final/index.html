@@ -3,55 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Placeholder final project page for the WDD231 repository.">
+  <meta name="description" content="Monrovia Food Finder helps visitors discover local meals, cafes, and dining stops across Monrovia, Liberia.">
   <meta name="author" content="Sherelton Blessing Dennis">
-  <title>Final Project Placeholder</title>
-  <link rel="stylesheet" href="../styles/normalize.css">
-  <link rel="stylesheet" href="../styles/small.css">
-  <link rel="stylesheet" href="../styles/larger.css">
-  <script src="../scripts/navigation.js" defer></script>
+  <meta property="og:title" content="Monrovia Food Finder">
+  <meta property="og:description" content="Explore local Monrovia restaurants, popular dishes, and visitor-friendly dining plans.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/monrovia-food-finder.svg">
+  <title>Monrovia Food Finder | Home</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/site.css">
+  <script type="module" src="scripts/main.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
-    <a class="brand-wrap" href="../index.html">
-      <img src="../images/logo.svg" alt="WDD231 site logo" width="48" height="48">
-      <div>
-        <p class="site-title">Final Project</p>
-        <span class="site-name">Sherelton Blessing Dennis</span>
-      </div>
+    <a class="brand" href="index.html" aria-label="Monrovia Food Finder home">
+      <img src="images/favicon.svg" alt="" width="44" height="44">
+      <span>Monrovia Food Finder</span>
     </a>
-    <button id="menuButton" class="menu-button" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
+    <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
       <span aria-hidden="true">&#9776;</span>
     </button>
+    <nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="directory.html">Dining Directory</a>
+      <a href="plan.html">Plan a Visit</a>
+    </nav>
   </header>
 
-  <nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
-    <ul>
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../chamber/directory.html">Chamber</a></li>
-      <li><a href="index.html" aria-current="page">Final</a></li>
-    </ul>
-  </nav>
-
   <main id="main-content">
-    <h1>Final Project Placeholder</h1>
-    <p>This is a placeholder page for the week 6 Final project. Once the final project is ready, replace this content with the complete final site.</p>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Local dining guide</p>
+        <h1>Find Monrovia meals worth planning around.</h1>
+        <p>Browse reliable places for Liberian plates, quick lunches, coffee stops, fresh seafood, and family dinners across the city.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="directory.html">Explore Places</a>
+          <a class="button secondary" href="plan.html">Plan a Visit</a>
+        </div>
+      </div>
+      <img class="hero-image" src="images/monrovia-food-finder.svg" alt="Illustrated Liberian meal with rice, greens, fish, and fruit" width="720" height="500">
+    </section>
+
+    <section class="section-grid" aria-label="Food guide highlights">
+      <article>
+        <h2>Built for visitors</h2>
+        <p>Each listing includes cuisine, neighborhood, price range, best time to visit, and service notes so travelers can compare options quickly.</p>
+      </article>
+      <article>
+        <h2>Local flavor</h2>
+        <p>The guide favors recognizable Monrovia dining situations: lunch bowls, grilled fish, coffee breaks, beach meals, and casual dinner spots.</p>
+      </article>
+      <article>
+        <h2>Saved preference</h2>
+        <p>Choose a favorite cuisine in the directory and the site remembers it on your next visit using local storage.</p>
+      </article>
+    </section>
+
+    <section class="feature-band">
+      <div>
+        <p class="eyebrow">Directory preview</p>
+        <h2>Fifteen dining ideas, one quick comparison.</h2>
+        <p>The dining directory is generated from JSON data with JavaScript. Open any card for a detailed modal, or filter the list by cuisine.</p>
+      </div>
+      <a class="button primary" href="directory.html">View Directory</a>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-grid">
-      <div>
-        <p><a href="../index.html">Back to Home</a></p>
-      </div>
-      <div>
-        <p>&copy; <span id="currentYear"></span> Sherelton Blessing Dennis</p>
-      </div>
-      <div>
-        <p id="lastModified"></p>
-      </div>
-    </div>
+    <p>&copy; <span id="current-year"></span> Sherelton Blessing Dennis</p>
+    <p><a href="attributions.html">Attributions</a></p>
+    <p><a href="https://www.youtube.com/" target="_blank" rel="noopener">Video demonstration</a></p>
+    <p id="last-modified"></p>
   </footer>
-  <script src="../scripts/date.js" defer></script>
 </body>
 </html>
