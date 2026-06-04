@@ -6,7 +6,6 @@
   --surface: #ffffff;
   --line: #d8ded6;
   --ink: #16201d;
-  --muted: #52615c;
 }
 
 * {
@@ -62,7 +61,7 @@ header h1 {
 
 .kicker {
   margin: 0 0 0.5rem;
-  color: #ffd48a;
+  color: var(--cream);
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -97,6 +96,10 @@ li {
   background: var(--leaf-dark);
 }
 
+.mid-leaf {
+  background: var(--leaf);
+}
+
 .pepper {
   background: var(--pepper);
 }
@@ -105,11 +108,23 @@ li {
   background: var(--cream);
 }
 
+.white {
+  background: var(--surface);
+}
+
+.line {
+  background: var(--line);
+}
+
+.ink {
+  background: var(--ink);
+}
+
 .wireframe {
   display: grid;
   gap: 0.6rem;
   padding: 0.75rem;
-  background: #eef4ef;
+  background: var(--cream);
   border: 2px solid var(--leaf);
 }
 
