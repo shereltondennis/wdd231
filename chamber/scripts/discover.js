@@ -5,7 +5,14 @@ const dayInMilliseconds = 24 * 60 * 60 * 1000;
 
 function showVisitMessage() {
   const now = Date.now();
-  const storedVisit = Number(localStorage.getItem(visitKey));
+  let storedVisit = 0;
+
+  try {
+    storedVisit = Number(localStorage.getItem(visitKey));
+  } catch (error) {
+    visitMessage.textContent = "Welcome! Explore featured places across Monrovia.";
+    return;
+  }
 
   if (!storedVisit) {
     visitMessage.textContent = "Welcome! Let us know if you have any questions.";
@@ -21,7 +28,11 @@ function showVisitMessage() {
     }
   }
 
-  localStorage.setItem(visitKey, String(now));
+  try {
+    localStorage.setItem(visitKey, String(now));
+  } catch (error) {
+    visitMessage.textContent = "Welcome! Explore featured places across Monrovia.";
+  }
 }
 
 function buildCard(place) {
@@ -33,7 +44,7 @@ function buildCard(place) {
       </figure>
       <address>${place.address}</address>
       <p>${place.description}</p>
-      <a class="learn-more" href="${place.url}" target="_blank" rel="noopener">Learn More</a>
+      <a class="learn-more" href="${place.url}" target="_blank" rel="noopener" aria-label="Learn more about ${place.name}">Learn More</a>
     </article>
   `;
 }
