@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover notable Monrovia places, landmarks, and community destinations with the Monrovia Regional Chamber of Commerce.">
+  <meta name="author" content="Sherelton Blessing Dennis">
+  <meta property="og:title" content="Monrovia Regional Chamber | Discover">
+  <meta property="og:description" content="Explore Monrovia attractions, local landmarks, and visitor-friendly community places.">
+  <meta property="og:image" content="https://shereltondennis.github.io/wdd231/chamber/images/chamber-social.svg">
+  <meta property="og:url" content="https://shereltondennis.github.io/wdd231/chamber/discover.html">
+  <meta property="og:type" content="website">
+  <title>Monrovia Regional Chamber | Discover</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <link rel="stylesheet" href="styles/discover.css">
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/footer.js" defer></script>
+  <script src="scripts/discover.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="brand-wrap">
+      <img src="images/favicon.svg" alt="" width="44" height="44">
+      <div>
+        <p class="site-title">Monrovia Regional Chamber</p>
+        <p class="site-subtitle">Chamber of Commerce</p>
+      </div>
+    </div>
+    <button id="menuButton" class="menu-button" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
+      <span aria-hidden="true">&#9776;</span>
+    </button>
+  </header>
+
+  <nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="join.html">Join</a></li>
+      <li><a href="discover.html" aria-current="page">Discover</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content" class="discover-main">
+    <section class="discover-hero">
+      <p class="section-kicker">Discover Monrovia</p>
+      <h1>Places that shape business, culture, and community.</h1>
+      <p id="visitMessage" class="visit-message" aria-live="polite">Checking your last visit...</p>
+    </section>
+
+    <section aria-labelledby="discover-heading">
+      <div class="discover-heading">
+        <h2 id="discover-heading">Featured Places</h2>
+        <p>Each card is generated from local JSON data.</p>
+      </div>
+      <div id="discoverGrid" class="discover-grid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <section>
+        <h2>Monrovia Regional Chamber</h2>
+        <p>15 Capitol Hill Road, Monrovia, Liberia</p>
+        <p>info@monroviachamber.org</p>
+        <p>+231 77 310 4401</p>
+      </section>
+      <section>
+        <h2>Development</h2>
+        <p>&copy; <span id="currentYear"></span> Sherelton Blessing Dennis</p>
+        <p>WDD 231 Chamber Project</p>
+        <p id="lastModified"></p>
+      </section>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Providence Island",
+    "address": "Broad Street Bridge, Central Monrovia",
+    "description": "A historic arrival point and cultural landmark connected to Liberia's founding story and public ceremonies.",
+    "image": "images/discover-providence.webp",
+    "url": "https://www.google.com/maps/search/Providence+Island+Monrovia"
+  },
+  {
+    "name": "Waterside Market",
+    "address": "Mechlin Street, Central Monrovia",
+    "description": "A busy trading area where shoppers find textiles, household goods, food items, and small business activity.",
+    "image": "images/discover-waterside.webp",
+    "url": "https://www.google.com/maps/search/Waterside+Market+Monrovia"
+  },
+  {
+    "name": "Centennial Pavilion",
+    "address": "Ashmun Street, Monrovia",
+    "description": "A civic venue used for major national events, public gatherings, and community programs.",
+    "image": "images/discover-pavilion.webp",
+    "url": "https://www.google.com/maps/search/Centennial+Pavilion+Monrovia"
+  },
+  {
+    "name": "Mamba Point",
+    "address": "Mamba Point, Monrovia",
+    "description": "A coastal district with hotels, restaurants, diplomatic offices, and visitor-friendly business services.",
+    "image": "images/discover-mamba-point.webp",
+    "url": "https://www.google.com/maps/search/Mamba+Point+Monrovia"
+  },
+  {
+    "name": "Ducor Hill",
+    "address": "Ducor Hill, Central Monrovia",
+    "description": "An elevated viewpoint overlooking the city, harbor, and Atlantic coastline near historic downtown sites.",
+    "image": "images/discover-ducor.webp",
+    "url": "https://www.google.com/maps/search/Ducor+Hill+Monrovia"
+  },
+  {
+    "name": "Ce Ce Beach",
+    "address": "Paynesville Coast Road, Greater Monrovia",
+    "description": "A popular beach destination for weekend recreation, informal dining, and small vendor activity.",
+    "image": "images/discover-beach.webp",
+    "url": "https://www.google.com/maps/search/Ce+Ce+Beach+Monrovia"
+  },
+  {
+    "name": "Antoinette Tubman Stadium",
+    "address": "United Nations Drive, Monrovia",
+    "description": "A central sports venue supporting football matches, youth programs, and public entertainment events.",
+    "image": "images/discover-stadium.webp",
+    "url": "https://www.google.com/maps/search/Antoinette+Tubman+Stadium+Monrovia"
+  },
+  {
+    "name": "Sinkor Business Corridor",
+    "address": "Tubman Boulevard, Sinkor",
+    "description": "A major commercial corridor with banks, offices, restaurants, shops, and professional service providers.",
+    "image": "images/discover-sinkor.webp",
+    "url": "https://www.google.com/maps/search/Sinkor+Tubman+Boulevard+Monrovia"
+  }
+]

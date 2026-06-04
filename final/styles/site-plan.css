@@ -1,0 +1,171 @@
+:root {
+  --leaf-dark: #164333;
+  --leaf: #246b55;
+  --pepper: #b73822;
+  --cream: #fff8e8;
+  --surface: #ffffff;
+  --line: #d8ded6;
+  --ink: #16201d;
+  --muted: #52615c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  color: var(--ink);
+  background: var(--cream);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+header,
+main,
+footer {
+  width: min(960px, 100%);
+  margin: 0 auto;
+}
+
+header {
+  padding: 2rem 1rem;
+  background: var(--leaf-dark);
+  color: var(--surface);
+}
+
+main {
+  padding: 1rem;
+}
+
+section {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--leaf-dark);
+  line-height: 1.2;
+}
+
+header h1 {
+  color: var(--surface);
+  margin: 0;
+  font-size: 2.3rem;
+}
+
+.kicker {
+  margin: 0 0 0.5rem;
+  color: #ffd48a;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+ul {
+  padding-left: 1.25rem;
+}
+
+li {
+  margin-bottom: 0.45rem;
+}
+
+.swatches,
+.wireframes {
+  display: grid;
+  gap: 1rem;
+}
+
+.swatches article {
+  border: 1px solid var(--line);
+  border-radius: 0.45rem;
+  padding: 1rem;
+}
+
+.swatch {
+  height: 64px;
+  border-radius: 0.35rem;
+  border: 1px solid var(--line);
+}
+
+.leaf {
+  background: var(--leaf-dark);
+}
+
+.pepper {
+  background: var(--pepper);
+}
+
+.cream {
+  background: var(--cream);
+}
+
+.wireframe {
+  display: grid;
+  gap: 0.6rem;
+  padding: 0.75rem;
+  background: #eef4ef;
+  border: 2px solid var(--leaf);
+}
+
+.wireframe div {
+  min-height: 48px;
+  padding: 0.75rem;
+  background: var(--surface);
+  border: 1px dashed var(--leaf-dark);
+  color: var(--leaf-dark);
+  font-weight: 700;
+  text-align: center;
+}
+
+.mobile {
+  max-width: 330px;
+}
+
+footer {
+  padding: 1rem;
+  background: var(--leaf-dark);
+  color: var(--surface);
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (min-width: 700px) {
+  header {
+    border-radius: 0 0 0.75rem 0.75rem;
+  }
+
+  .swatches {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .wireframes {
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: start;
+  }
+
+  .desktop {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .desktop .wide {
+    grid-column: 1 / -1;
+  }
+
+  .desktop .hero-text {
+    grid-column: span 1;
+    min-height: 150px;
+  }
+
+  .desktop .hero-media {
+    grid-column: span 2;
+    min-height: 150px;
+  }
+}
