@@ -6,6 +6,7 @@ const count = document.querySelector("#listing-count");
 const saveButton = document.querySelector("#save-preference");
 const note = document.querySelector("#preference-note");
 const dialog = document.querySelector("#details-dialog");
+const dialogTitle = document.querySelector("#dialog-title");
 const dialogContent = document.querySelector("#dialog-content");
 const closeButton = document.querySelector("#dialog-close");
 const preferenceKey = "monrovia-food-cuisine";
@@ -78,8 +79,8 @@ function cardTemplate(restaurant, index) {
 }
 
 function openDetails(restaurant) {
+  dialogTitle.textContent = restaurant.name;
   dialogContent.innerHTML = `
-    <h2 id="dialog-title">${restaurant.name}</h2>
     <p>${restaurant.description}</p>
     <ul class="meta-list">
       <li><strong>Specialty:</strong> ${restaurant.specialty}</li>

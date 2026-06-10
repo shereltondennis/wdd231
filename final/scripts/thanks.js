@@ -15,10 +15,19 @@ const labels = {
   notes: "Notes"
 };
 
-const rows = Object.entries(labels).map(([key, label]) => {
+const list = document.createElement("dl");
+
+Object.entries(labels).forEach(([key, label]) => {
   const values = params.getAll(key).filter(Boolean);
   const value = values.length ? values.join(", ") : "Not provided";
-  return `<dt>${label}</dt><dd>${value}</dd>`;
+
+  const term = document.createElement("dt");
+  term.textContent = label;
+
+  const description = document.createElement("dd");
+  description.textContent = value;
+
+  list.append(term, description);
 });
 
-output.innerHTML = `<dl>${rows.join("")}</dl>`;
+output.appendChild(list);
